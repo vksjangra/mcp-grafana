@@ -33,7 +33,7 @@ func searchDashboards(ctx context.Context, args SearchDashboardsParams) (models.
 }
 
 var SearchDashboards = mcpgrafana.MustTool(
-	"search_dashboards",
+	"grafana_search_dashboards",
 	"Search for Grafana dashboards by a query string. Returns a list of matching dashboards with details like title, UID, folder, tags, and URL.",
 	searchDashboards,
 	mcp.WithTitleAnnotation("Search dashboards"),

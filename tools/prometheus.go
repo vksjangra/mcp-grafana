@@ -102,7 +102,7 @@ func listPrometheusMetricMetadata(ctx context.Context, args ListPrometheusMetric
 }
 
 var ListPrometheusMetricMetadata = mcpgrafana.MustTool(
-	"list_prometheus_metric_metadata",
+	"grafana_list_prometheus_metric_metadata",
 	"List Prometheus metric metadata. Returns metadata about metrics currently scraped from targets. Note: This endpoint is experimental.",
 	listPrometheusMetricMetadata,
 	mcp.WithTitleAnnotation("List Prometheus metric metadata"),
@@ -177,7 +177,7 @@ func queryPrometheus(ctx context.Context, args QueryPrometheusParams) (model.Val
 }
 
 var QueryPrometheus = mcpgrafana.MustTool(
-	"query_prometheus",
+	"grafana_query_prometheus",
 	"Query Prometheus using a PromQL expression. Supports both instant queries (at a single point in time) and range queries (over a time range). Time can be specified either in RFC3339 format or as relative time expressions like 'now', 'now-1h', 'now-30m', etc.",
 	queryPrometheus,
 	mcp.WithTitleAnnotation("Query Prometheus metrics"),
@@ -247,7 +247,7 @@ func listPrometheusMetricNames(ctx context.Context, args ListPrometheusMetricNam
 }
 
 var ListPrometheusMetricNames = mcpgrafana.MustTool(
-	"list_prometheus_metric_names",
+	"grafana_list_prometheus_metric_names",
 	"List metric names in a Prometheus datasource. Retrieves all metric names and then filters them locally using the provided regex. Supports pagination.",
 	listPrometheusMetricNames,
 	mcp.WithTitleAnnotation("List Prometheus metric names"),
@@ -352,7 +352,7 @@ func listPrometheusLabelNames(ctx context.Context, args ListPrometheusLabelNames
 }
 
 var ListPrometheusLabelNames = mcpgrafana.MustTool(
-	"list_prometheus_label_names",
+	"grafana_list_prometheus_label_names",
 	"List label names in a Prometheus datasource. Allows filtering by series selectors and time range.",
 	listPrometheusLabelNames,
 	mcp.WithTitleAnnotation("List Prometheus label names"),
@@ -411,7 +411,7 @@ func listPrometheusLabelValues(ctx context.Context, args ListPrometheusLabelValu
 }
 
 var ListPrometheusLabelValues = mcpgrafana.MustTool(
-	"list_prometheus_label_values",
+	"grafana_list_prometheus_label_values",
 	"Get the values for a specific label name in Prometheus. Allows filtering by series selectors and time range.",
 	listPrometheusLabelValues,
 	mcp.WithTitleAnnotation("List Prometheus label values"),

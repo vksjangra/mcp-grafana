@@ -65,7 +65,7 @@ func summarizeDatasources(dataSources models.DataSourceList) []dataSourceSummary
 }
 
 var ListDatasources = mcpgrafana.MustTool(
-	"list_datasources",
+	"grafana_list_datasources",
 	"List available Grafana datasources. Optionally filter by datasource type (e.g., 'prometheus', 'loki'). Returns a summary list including ID, UID, name, type, and default status.",
 	listDatasources,
 	mcp.WithTitleAnnotation("List datasources"),
@@ -91,7 +91,7 @@ func getDatasourceByUID(ctx context.Context, args GetDatasourceByUIDParams) (*mo
 }
 
 var GetDatasourceByUID = mcpgrafana.MustTool(
-	"get_datasource_by_uid",
+	"grafana_get_datasource_by_uid",
 	"Retrieves detailed information about a specific datasource using its UID. Returns the full datasource model, including name, type, URL, access settings, JSON data, and secure JSON field status.",
 	getDatasourceByUID,
 	mcp.WithTitleAnnotation("Get datasource by UID"),
@@ -113,7 +113,7 @@ func getDatasourceByName(ctx context.Context, args GetDatasourceByNameParams) (*
 }
 
 var GetDatasourceByName = mcpgrafana.MustTool(
-	"get_datasource_by_name",
+	"grafana_get_datasource_by_name",
 	"Retrieves detailed information about a specific datasource using its name. Returns the full datasource model, including UID, type, URL, access settings, JSON data, and secure JSON field status.",
 	getDatasourceByName,
 	mcp.WithTitleAnnotation("Get datasource by name"),

@@ -31,7 +31,7 @@ async def test_loki_logs_tool(model: str, mcp_client: ClientSession):
 
     # 1. List datasources
     messages = await llm_tool_call_sequence(
-        model, messages, tools, mcp_client, "list_datasources"
+        model, messages, tools, mcp_client, "grafana_list_datasources"
     )
     datasources_response = messages[-1].content
     datasources_data = json.loads(datasources_response)
@@ -40,7 +40,7 @@ async def test_loki_logs_tool(model: str, mcp_client: ClientSession):
 
     # 2. Query logs
     messages = await llm_tool_call_sequence(
-        model, messages, tools, mcp_client, "query_loki_logs", {"datasourceUid": loki_ds["uid"], "logql": "{container=\"mcp-grafana-grafana-1\"}"}
+        model, messages, tools, mcp_client, "grafana_query_loki_logs", {"datasourceUid": loki_ds["uid"], "logql": "{container=\"mcp-grafana-grafana-1\"}"}
     )
 
     # 3. Final LLM response
@@ -67,7 +67,7 @@ async def test_loki_container_labels(model: str, mcp_client: ClientSession):
 
     # 1. List datasources
     messages = await llm_tool_call_sequence(
-        model, messages, tools, mcp_client, "list_datasources"
+        model, messages, tools, mcp_client, "grafana_list_datasources"
     )
     datasources_response = messages[-1].content
     datasources_data = json.loads(datasources_response)
@@ -76,7 +76,7 @@ async def test_loki_container_labels(model: str, mcp_client: ClientSession):
 
     # 2. List label values for 'container'
     messages = await llm_tool_call_sequence(
-        model, messages, tools, mcp_client, "list_loki_label_values",
+        model, messages, tools, mcp_client, "grafana_list_loki_label_values",
         {"datasourceUid": loki_ds["uid"], "labelName": "container"}
     )
 

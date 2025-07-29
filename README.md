@@ -59,36 +59,36 @@ the OnCall tools, use `--disable-oncall`.
 
 | Tool                              | Category    | Description                                                        |
 | --------------------------------- | ----------- | ------------------------------------------------------------------ |
-| `list_teams`                      | Admin       | List all teams                                                     |
-| `search_dashboards`               | Search      | Search for dashboards                                              |
-| `get_dashboard_by_uid`            | Dashboard   | Get a dashboard by uid                                             |
-| `update_dashboard`                | Dashboard   | Update or create a new dashboard                                   |
-| `get_dashboard_panel_queries`     | Dashboard   | Get panel title, queries, datasource UID and type from a dashboard |
-| `list_datasources`                | Datasources | List datasources                                                   |
-| `get_datasource_by_uid`           | Datasources | Get a datasource by uid                                            |
-| `get_datasource_by_name`          | Datasources | Get a datasource by name                                           |
-| `query_prometheus`                | Prometheus  | Execute a query against a Prometheus datasource                    |
-| `list_prometheus_metric_metadata` | Prometheus  | List metric metadata                                               |
-| `list_prometheus_metric_names`    | Prometheus  | List available metric names                                        |
-| `list_prometheus_label_names`     | Prometheus  | List label names matching a selector                               |
-| `list_prometheus_label_values`    | Prometheus  | List values for a specific label                                   |
-| `list_incidents`                  | Incident    | List incidents in Grafana Incident                                 |
-| `create_incident`                 | Incident    | Create an incident in Grafana Incident                             |
-| `add_activity_to_incident`        | Incident    | Add an activity item to an incident in Grafana Incident            |
-| `resolve_incident`                | Incident    | Resolve an incident in Grafana Incident                            |
-| `query_loki_logs`                 | Loki        | Query and retrieve logs using LogQL (either log or metric queries) |
-| `list_loki_label_names`           | Loki        | List all available label names in logs                             |
-| `list_loki_label_values`          | Loki        | List values for a specific log label                               |
-| `query_loki_stats`                | Loki        | Get statistics about log streams                                   |
-| `list_alert_rules`                | Alerting    | List alert rules                                                   |
-| `get_alert_rule_by_uid`           | Alerting    | Get alert rule by UID                                              |
-| `list_oncall_schedules`           | OnCall      | List schedules from Grafana OnCall                                 |
-| `get_oncall_shift`                | OnCall      | Get details for a specific OnCall shift                            |
-| `get_current_oncall_users`        | OnCall      | Get users currently on-call for a specific schedule                |
-| `list_oncall_teams`               | OnCall      | List teams from Grafana OnCall                                     |
-| `list_oncall_users`               | OnCall      | List users from Grafana OnCall                                     |
-| `get_investigation`               | Sift        | Retrieve an existing Sift investigation by its UUID                |
-| `get_analysis`                    | Sift        | Retrieve a specific analysis from a Sift investigation             |
+| `grafana_list_teams`                      | Admin       | List all teams                                                     |
+| `grafana_search_dashboards`               | Search      | Search for dashboards                                              |
+| `grafana_get_dashboard_by_uid`            | Dashboard   | Get a dashboard by uid                                             |
+| `grafana_update_dashboard`                | Dashboard   | Update or create a new dashboard                                   |
+| `grafana_get_dashboard_panel_queries`     | Dashboard   | Get panel title, queries, datasource UID and type from a dashboard |
+| `grafana_list_datasources`                | Datasources | List datasources                                                   |
+| `grafana_get_datasource_by_uid`           | Datasources | Get a datasource by uid                                            |
+| `grafana_get_datasource_by_name`          | Datasources | Get a datasource by name                                           |
+| `grafana_query_prometheus`                | Prometheus  | Execute a query against a Prometheus datasource                    |
+| `grafana_list_prometheus_metric_metadata` | Prometheus  | List metric metadata                                               |
+| `grafana_list_prometheus_metric_names`    | Prometheus  | List available metric names                                        |
+| `grafana_list_prometheus_label_names`     | Prometheus  | List label names matching a selector                               |
+| `grafana_list_prometheus_label_values`    | Prometheus  | List values for a specific label                                   |
+| `grafana_list_incidents`                  | Incident    | List incidents in Grafana Incident                                 |
+| `grafana_create_incident`                 | Incident    | Create an incident in Grafana Incident                             |
+| `grafana_add_activity_to_incident`        | Incident    | Add an activity item to an incident in Grafana Incident            |
+| `grafana_resolve_incident`                | Incident    | Resolve an incident in Grafana Incident                            |
+| `grafana_query_loki_logs`                 | Loki        | Query and retrieve logs using LogQL (either log or metric queries) |
+| `grafana_list_loki_label_names`           | Loki        | List all available label names in logs                             |
+| `grafana_list_loki_label_values`          | Loki        | List values for a specific log label                               |
+| `grafana_query_loki_stats`                | Loki        | Get statistics about log streams                                   |
+| `grafana_list_alert_rules`                | Alerting    | List alert rules                                                   |
+| `grafana_get_alert_rule_by_uid`           | Alerting    | Get alert rule by UID                                              |
+| `grafana_list_oncall_schedules`           | OnCall      | List schedules from Grafana OnCall                                 |
+| `grafana_get_oncall_shift`                | OnCall      | Get details for a specific OnCall shift                            |
+| `grafana_get_current_oncall_users`        | OnCall      | Get users currently on-call for a specific schedule                |
+| `grafana_list_oncall_teams`               | OnCall      | List teams from Grafana OnCall                                     |
+| `grafana_list_oncall_users`               | OnCall      | List users from Grafana OnCall                                     |
+| `grafana_get_investigation`               | Sift        | Retrieve an existing Sift investigation by its UUID                |
+| `grafana_get_analysis`                    | Sift        | Retrieve a specific analysis from a Sift investigation             |
 | `list_investigations`             | Sift        | Retrieve a list of Sift investigations with an optional limit      |
 | `find_error_pattern_logs`         | Sift        | Finds elevated error patterns in Loki logs.                        |
 | `find_slow_requests`              | Sift        | Finds slow requests from the relevant tempo datasources.           |
