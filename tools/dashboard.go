@@ -61,7 +61,7 @@ var GetDashboardByUID = mcpgrafana.MustTool(
 )
 
 var UpdateDashboard = mcpgrafana.MustTool(
-	"update_dashboard",
+	"grafana_update_dashboard",
 	"Create or update a dashboard",
 	updateDashboard,
 	mcp.WithTitleAnnotation("Create or update dashboard"),

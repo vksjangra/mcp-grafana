@@ -221,7 +221,7 @@ list_pyroscope_label_values tool to fetch available label values. The returned p
 `
 
 var FetchPyroscopeProfile = mcpgrafana.MustTool(
-	"fetch_pyroscope_profile",
+	"grafana_fetch_pyroscope_profile",
 	fetchPyroscopeProfileToolPrompt,
 	fetchPyroscopeProfile,
 	mcp.WithTitleAnnotation("Fetch Pyroscope profile"),

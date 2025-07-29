@@ -28,7 +28,7 @@ async def test_dashboard_panel_queries_tool(model: str, mcp_client: ClientSessio
 
     # 1. Call the dashboard panel queries tool
     messages = await llm_tool_call_sequence(
-        model, messages, tools, mcp_client, "get_dashboard_panel_queries",
+        model, messages, tools, mcp_client, "grafana_get_dashboard_panel_queries",
         {"uid": "fe9gm6guyzi0wd"}
     )
 

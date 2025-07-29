@@ -85,7 +85,7 @@ async def test_list_teams_tool(
         messages,
         tools,
         mcp_client,
-        "list_teams",
+        "grafana_list_teams",
     )
 
     # 2. Final LLM response
