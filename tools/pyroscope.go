@@ -34,7 +34,7 @@ internal and rarely useful to users. If the time range is not provided, it defau
 `
 
 var ListPyroscopeLabelNames = mcpgrafana.MustTool(
-	"list_pyroscope_label_names",
+	"grafana_list_pyroscope_label_names",
 	listPyroscopeLabelNamesToolPrompt,
 	listPyroscopeLabelNames,
 	mcp.WithTitleAnnotation("List Pyroscope label names"),
@@ -93,7 +93,7 @@ is not provided, it defaults to the last hour.
 `
 
 var ListPyroscopeLabelValues = mcpgrafana.MustTool(
-	"list_pyroscope_label_values",
+	"grafana_list_pyroscope_label_values",
 	listPyroscopeLabelValuesToolPrompt,
 	listPyroscopeLabelValues,
 	mcp.WithTitleAnnotation("List Pyroscope label values"),
@@ -159,7 +159,7 @@ for every service. If the time range is not provided, it defaults to the last ho
 `
 
 var ListPyroscopeProfileTypes = mcpgrafana.MustTool(
-	"list_pyroscope_profile_types",
+	"grafana_list_pyroscope_profile_types",
 	listPyroscopeProfileTypesToolPrompt,
 	listPyroscopeProfileTypes,
 	mcp.WithTitleAnnotation("List Pyroscope profile types"),

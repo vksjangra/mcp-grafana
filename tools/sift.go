@@ -181,7 +181,7 @@ func getSiftInvestigation(ctx context.Context, args GetSiftInvestigationParams) 
 
 // GetSiftInvestigation is a tool for retrieving an existing investigation
 var GetSiftInvestigation = mcpgrafana.MustTool(
-	"get_sift_investigation",
+	"grafana_get_sift_investigation",
 	"Retrieves an existing Sift investigation by its UUID. The ID should be provided as a string in UUID format (e.g. '02adab7c-bf5b-45f2-9459-d71a2c29e11b').",
 	getSiftInvestigation,
 	mcp.WithTitleAnnotation("Get Sift investigation"),
@@ -223,7 +223,7 @@ func getSiftAnalysis(ctx context.Context, args GetSiftAnalysisParams) (*analysis
 
 // GetSiftAnalysis is a tool for retrieving a specific analysis from an investigation
 var GetSiftAnalysis = mcpgrafana.MustTool(
-	"get_sift_analysis",
+	"grafana_get_sift_analysis",
 	"Retrieves a specific analysis from an investigation by its UUID. The investigation ID and analysis ID should be provided as strings in UUID format.",
 	getSiftAnalysis,
 	mcp.WithTitleAnnotation("Get Sift analysis"),
@@ -258,7 +258,7 @@ func listSiftInvestigations(ctx context.Context, args ListSiftInvestigationsPara
 
 // ListSiftInvestigations is a tool for retrieving a list of investigations
 var ListSiftInvestigations = mcpgrafana.MustTool(
-	"list_sift_investigations",
+	"grafana_list_sift_investigations",
 	"Retrieves a list of Sift investigations with an optional limit. If no limit is specified, defaults to 10 investigations.",
 	listSiftInvestigations,
 	mcp.WithTitleAnnotation("List Sift investigations"),
@@ -345,7 +345,7 @@ func findErrorPatternLogs(ctx context.Context, args FindErrorPatternLogsParams) 
 
 // FindErrorPatternLogs is a tool for running an ErrorPatternLogs check
 var FindErrorPatternLogs = mcpgrafana.MustTool(
-	"find_error_pattern_logs",
+	"grafana_find_error_pattern_logs",
 	"Searches Loki logs for elevated error patterns compared to the last day's average, waits for the analysis to complete, and returns the results including any patterns found.",
 	findErrorPatternLogs,
 	mcp.WithTitleAnnotation("Find error patterns in logs"),
@@ -411,7 +411,7 @@ func findSlowRequests(ctx context.Context, args FindSlowRequestsParams) (*analys
 
 // FindSlowRequests is a tool for running an SlowRequests check
 var FindSlowRequests = mcpgrafana.MustTool(
-	"find_slow_requests",
+	"grafana_find_slow_requests",
 	"Searches relevant Tempo datasources for slow requests, waits for the analysis to complete, and returns the results.",
 	findSlowRequests,
 	mcp.WithTitleAnnotation("Find slow requests"),
