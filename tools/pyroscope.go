@@ -44,7 +44,7 @@ var ListPyroscopeLabelNames = mcpgrafana.MustTool(
 
 type ListPyroscopeLabelNamesParams struct {
 	DataSourceUID string `json:"data_source_uid" jsonschema:"required,description=The UID of the datasource to query"`
-	Matchers      string `json:"matchers,omitempty" jsonschema:"description=Prometheus style matchers used to filter the result set (defaults to: {})"`
+	Matchers      string `json:"matchers,omitempty" jsonschema:"Prometheus style matchers used t0 filter the result set (defaults to: {})"`
 	StartRFC3339  string `json:"start_rfc_3339,omitempty" jsonschema:"description=Optionally\\, the start time of the query in RFC3339 format (defaults to 1 hour ago)"`
 	EndRFC3339    string `json:"end_rfc_3339,omitempty" jsonschema:"description=Optionally\\, the end time of the query in RFC3339 format (defaults to now)"`
 }
